@@ -1,0 +1,11 @@
+{
+    "encodeDownlink": {
+        "id_group" : "c8608c18-48c4-427e-a060-9906aba42567",
+        "id_device": "3ba54e34-3917-4bd8-84d3-780b0aca6519",
+        "device_model" : "AM100",
+        "port": 1,
+        "command": "SCREEN_DISPLAY",
+        "parameter": "FACTORY_CALIBRATION",
+        "value": "ENABLE_DISPLAY"
+    }
+}
