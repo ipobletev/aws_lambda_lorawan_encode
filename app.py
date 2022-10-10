@@ -8,8 +8,8 @@ from encode.WS302 import WS302_DEVICE_HANDLE
 from encode.WS301 import WS301_DEVICE_HANDLE
 from encode.EM310 import EM310_DEVICE_HANDLE
 
-os.environ['AWS_PROFILE'] = "ismael"
-os.environ['AWS_DEFAULT_REGION'] = "us-west-2"
+# os.environ['AWS_PROFILE'] = ""
+# os.environ['AWS_DEFAULT_REGION'] = "us-west-2"
 
 # List of models and encode handlers
 listModels = [
@@ -27,7 +27,7 @@ def lambda_handler(event, context):
     iotwireless = boto3.client('iotwireless')
 
     # Get data
-    #string_data=event
+    string_data=event
     id_group = string_data["encodeDownlink"]["id_group"]
     id_device = string_data["encodeDownlink"]["id_device"]
     device_model = string_data["encodeDownlink"]["device_model"]
@@ -88,9 +88,9 @@ def lambda_handler(event, context):
         'body': json.dumps('Hello from Lambda!')
     }
     
-#Input test local json
-json_file = open('test.json')
-string_data = json.load(json_file)
-print(string_data)
+# #Input test local json
+# json_file = open('test.json')
+# string_data = json.load(json_file)
+# print(string_data)
 
-lambda_handler(string_data,"")
+# lambda_handler(string_data,"")
